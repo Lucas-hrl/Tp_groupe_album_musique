@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire</title>
+</head>
+<body>
+    <h1>Formulaire de saisie/modification des groupes de musique :</h1>
+        {% if id != ''%}
+            <form class="form" action="/artistes/traitement_update/{{id}}/" method ="POST">
+        {% else %}
+            <form class="form" action="/artistes/traitement/" method ="POST">
+        {% endif %}
+
+
+        {% csrf_token %}
+        {{ form }} <!-- permet d'afficher tous les champs sous forme d'une liste-->
+        <input type="submit" value="envoyer les données"\>
+    </form>
+
+    <a href="/artistes/index/">Page d'accueil</a>
+    <a href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
+</body>
+</html>

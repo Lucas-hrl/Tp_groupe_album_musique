@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Afficher</title>
+</head>
+<body>
+    {% for donnees in liste_g %}
+        <li>{{donnees.nom}} fondée en {{donnees.annee_creation}}<li>
+        <a href="/artistes/afficher_un/{{donnees.id}}/">Affichage détails…</a>
+        <a href="/artistes/update/{{donnees.id}}/">Update</a>
+        <a href="/artistes/supprimer/{{donnees.id}}/">Supprimer !</a>
+    {% endfor %}
+    <a href="../formulaire/">Ajouter un groupe</a>
+    <a href="../index/">Page d'accueil</a>
+
+
+</body>
+</html>

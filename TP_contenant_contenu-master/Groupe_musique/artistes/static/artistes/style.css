@@ -1,0 +1,12 @@
+.bouton_ajout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 150px;
+    margin:15px;
+    padding: 15px;
+    color: green;
+    border: aqua 2px solid;
+    border-radius: 100px;
+    background-color: aqua;
+}
