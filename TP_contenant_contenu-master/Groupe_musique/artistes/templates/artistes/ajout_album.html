@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
     <title>ajout album</title>
 </head>
@@ -16,7 +18,7 @@
   {% csrf_token %}
         {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste-->
         <input type="submit" value="envoyer les données"\>
-        <a href="/artistes/index/">Page d'accueil</a>
-        <a href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
+        <a class= "bouton_afficher" href="/artistes/index/">Page d'accueil</a>
+        <a class= "bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
 </body>
 </html>

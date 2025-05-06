@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
     <title>ajout d'un Groupe</title>
 </head>
@@ -8,8 +10,8 @@
     <p> Affichage : {{groupe.id}}) {{groupe.affichage}} </p>
 
 
-    <a href="/artistes/formulaire/">Ajouter un nouveau groupe</a>
-    <a href="/artistes/index/">Page d'accueil</a>
-    <a href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
+    <a class= "bouton_afficher" href="/artistes/formulaire/">Ajouter un nouveau groupe</a>
+    <a class= "bouton_afficher" href="/artistes/index/">Page d'accueil</a>
+    <a class= "bouton_afficher" href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
 </body>
 </html>

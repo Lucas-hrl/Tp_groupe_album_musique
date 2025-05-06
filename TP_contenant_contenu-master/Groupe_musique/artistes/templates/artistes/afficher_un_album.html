@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -10,6 +12,6 @@
 
     <a href="/artistes/ajout_album/">Ajouter un nouvel album</a>
     <a href="/artistes/index/">Page d'accueil</a>
-    <a href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
+    <a class="bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
 </body>
 </html>

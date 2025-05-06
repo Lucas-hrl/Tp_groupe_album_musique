@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
     <title>Affichage Albums</title>
 </head>
@@ -11,7 +13,7 @@
         <a href="/artistes/update_album/{{donnees.id}}/">Update</a>
         <a href="/artistes/supprimer_album/{{donnees.id}}/">Supprimer !</a>
     {% endfor %}
-    <a href="/artistes/ajout_album/">Ajouter un album</a>
-    <a href="/artistes/index/">Page d'accueil</a>
+    <a class = "bouton_ajout" href="/artistes/ajout_album/">Ajouter un album</a>
+    <a class = "bouton_ajout" href="/artistes/index/">Page d'accueil</a>
 </body>
 </html>
