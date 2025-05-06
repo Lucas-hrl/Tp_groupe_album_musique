@@ -6,14 +6,19 @@ from django import forms
 class GroupeFormulaire(ModelForm):
     class Meta:
         model = models.Groupe
-        fields = ('nom','annee_creation')
+        fields = ('nom','annee_creation','nbr_album','nationalite')
         labels = {
             'nom':_('Nom du groupe: '),
             'annee_creation':_("Année de formation du groupe: "),
+            'nbr_album': _("Nombre d'album(s) du groupe: "),
+            'nationalite':_('Nationalité du groupe: '),
         }
 
         widgets = {
             'nom': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': 'Nom du groupe…'}),
+            'annee_creation': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': 'Année de formation...'}),
+            'nbr_album': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': "Nombre d'albums..."}),
+            'nationalite': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': 'Nationalité'}),
         }
 
 

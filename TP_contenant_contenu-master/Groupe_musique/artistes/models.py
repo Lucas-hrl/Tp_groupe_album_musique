@@ -5,13 +5,18 @@ from django.db import models
 class Groupe(models.Model):
     nom = models.CharField(max_length=100, blank=False)
     annee_creation = models.IntegerField(blank=False)
+    nbr_album = models.IntegerField()
+    nationalite = models.CharField(max_length=100, blank=False)
 
     def __str__(self):
-        chaine = f"{self.nom} fondé en  {self.annee_creation}"
+        chaine = f"Le groupe {self.nom} fondé en  {self.annee_creation} est {self.nationalite}"
         return chaine
 
     def dico(self):
         return {"nom":self.nom,"annee_creation":self.annee_creation}
+
+
+
 
 class Album(models.Model):
     STYLES = [
