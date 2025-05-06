@@ -54,7 +54,7 @@ def supprimer(request,id):
 #actions pour les albums
 def ajout_album(request):
     form = AlbumFormulaire()
-    return render(request, "artistes/ajout_album.html", {"form": form})
+    return render(request, "artistes/ajout_album.html/", {"form": form})
 
 def traitement_album(request):
     form = AlbumFormulaire(request.POST)

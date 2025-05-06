@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Groupe_musique.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'artistes' / 'index'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

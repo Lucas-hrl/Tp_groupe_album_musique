@@ -6,7 +6,7 @@
 </head>
 <body>
     {% for donnees in liste_a %}
-        <li>{{donnees.nom_album}} {{donnees.date_sortie}} <li>
+        <li>{{donnees.nom_album}} - {{donnees.nom_groupe}} - {{donnees.date_sortie}} <li>
         <a href="/artistes/afficher_un_album/{{donnees.id}}/">Affichage détails…</a>
         <a href="/artistes/update_album/{{donnees.id}}/">Update</a>
         <a href="/artistes/supprimer_album/{{donnees.id}}/">Supprimer !</a>
