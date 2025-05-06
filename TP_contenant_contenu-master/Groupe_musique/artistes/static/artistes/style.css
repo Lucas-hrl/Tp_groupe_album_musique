@@ -10,3 +10,20 @@
     border-radius: 100px;
     background-color: aqua;
 }
+
+h1 {
+    text-align:center;
+    border: solid 2px blue;
+    background-color: yellow;
+}
+
+.bouton_afficher {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border: 2px solid blue;
+     background-color: white;
+     margin: 2px 0;
+     border-radius: 5px;
+     text-align: center;
+}

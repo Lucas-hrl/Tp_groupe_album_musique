@@ -9,7 +9,7 @@ class Groupe(models.Model):
     nationalite = models.CharField(max_length=100, blank=False)
 
     def __str__(self):
-        chaine = f"Le groupe {self.nom} fondé en  {self.annee_creation} est {self.nationalite}"
+        chaine = f" {self.nom} fondé en  {self.annee_creation} - origine: {self.nationalite} - Nombre d'albums : {self.nbr_album}"
         return chaine
 
     def dico(self):
