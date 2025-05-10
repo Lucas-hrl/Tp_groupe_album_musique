@@ -4,21 +4,28 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
-    <title>formulaire</title>
+    <title>Formulaire</title>
 </head>
 <body>
-    <h1>Formulaire de saisie/modification des groupes de musique :</h1>
-        {% if id != ''%}
-            <form class="form" action="/artistes/traitement/" method ="POST">
-        {% else %}
-            <form class="form" action="/artistes/traitement_update/{{id}}/" method ="POST">
-        {% endif %}
-        {% csrf_token %}
-        {{ form }} <!-- permet d'afficher tous les champs sous forme d'une liste-->
-        <input type="submit" value="envoyer les données"\>
-    </form>
+    <header>
+        <h1>Formulaire de saisie / modification des groupes de musique :</h1>
+    </header>
 
-    <a class= "bouton_afficher" href="/artistes/index/">Page d'accueil</a>
-    <a class= "bouton_afficher" href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
+    <div>
+        {% if id != '' %}
+            <form class="form" action="/artistes/traitement/" method="POST">
+        {% else %}
+            <form class="form" action="/artistes/traitement_update/{{id}}/" method="POST">
+        {% endif %}
+            {% csrf_token %}
+            {{ form.as_ul }}
+            <input type="submit" class="bouton_ajout" value="Envoyer les données">
+        </form>
+    </div>
+
+    <div>
+        <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
+        <a class="bouton_afficher" href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
+    </div>
 </body>
 </html>

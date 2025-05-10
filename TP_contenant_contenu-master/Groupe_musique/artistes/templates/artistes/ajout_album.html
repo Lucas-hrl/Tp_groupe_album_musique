@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
-    <title>ajout album</title>
+    <title>Ajout d'album</title>
 </head>
 <body>
-  <h1>Formulaire de saisie/modification des albums :</h1>
-    {% if id != ''%}
-            <form class="form" action="/artistes/traitement_album/" method ="POST">
-            {% else %}
-            <form class="form" action="/artistes/traitement_update_album/{{id}}/" method ="POST">
+    <header>
+        <h1>Formulaire de saisie / modification des albums :</h1>
+    </header>
 
-            {% endif %}
+    <div class="form-container">
+        {% if id != '' %}
+            <form class="form" action="/artistes/traitement_album/" method="POST">
+        {% else %}
+            <form class="form" action="/artistes/traitement_update_album/{{id}}/" method="POST">
+        {% endif %}
+            {% csrf_token %}
+            {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste -->
+            <input type="submit" class="bouton_ajout" value="Envoyer les données">
+        </form>
+    </div>
 
-  {% csrf_token %}
-        {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste-->
-        <input type="submit" value="envoyer les données"\>
-        <a class= "bouton_afficher" href="/artistes/index/">Page d'accueil</a>
-        <a class= "bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
+    <div class="navigation">
+        <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
+        <a class="bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
+    </div>
 </body>
 </html>

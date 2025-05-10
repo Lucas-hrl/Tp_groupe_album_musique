@@ -7,15 +7,26 @@
     <title>Afficher</title>
 </head>
 <body>
-    {% for donnees in liste_g %}
-        <li>{{donnees.nom}} fondée en {{donnees.annee_creation}}<li>
-        <a href="/artistes/afficher_un/{{donnees.id}}/">Affichage détails…</a>
-        <a href="/artistes/update/{{donnees.id}}/">Update</a>
-        <a href="/artistes/supprimer/{{donnees.id}}/">Supprimer !</a>
-    {% endfor %}
-    <a href="../formulaire/">Ajouter un groupe</a>
-    <a href="../index/">Page d'accueil</a>
+    <header>
+        <h1>Liste des groupes</h1>
+    </header>
 
+    <main>
+        <ul>
+            {% for donnees in liste_g %}
+                <li>
+                    <p><strong>{{ donnees.nom }}</strong> — fondé en {{ donnees.annee_creation }}</p>
+                    <a class="bouton_afficher" href="/artistes/afficher_un/{{ donnees.id }}/">Détails</a>
+                    <a class="bouton_ajout" href="/artistes/update/{{ donnees.id }}/">Modifier</a>
+                    <a class="bouton_supprimer" href="/artistes/supprimer/{{ donnees.id }}/">Supprimer</a>
+                </li>
+            {% endfor %}
+        </ul>
 
+        <div class="navigation">
+            <a class="bouton_ajout" href="../formulaire/">Ajouter un groupe</a>
+            <a class="bouton_accueil" href="../index/">Page d'accueil</a>
+        </div>
+    </main>
 </body>
 </html>

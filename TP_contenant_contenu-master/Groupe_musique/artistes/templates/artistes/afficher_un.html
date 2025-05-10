@@ -4,14 +4,17 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
     <meta charset="UTF-8">
-    <title>ajout d'un Groupe</title>
+    <title>Affichage d'un Groupe</title>
 </head>
 <body>
-    <p> Affichage : {{groupe.id}}) {{groupe.affichage}} </p>
+<header>
+        <h1>Détails du groupe</h1>
+</header>
+    <p>Groupe n°{{ groupe.id }} — {{ groupe.affichage }}</p>
 
-
-    <a class= "bouton_afficher" href="/artistes/formulaire/">Ajouter un nouveau groupe</a>
-    <a class= "bouton_afficher" href="/artistes/index/">Page d'accueil</a>
-    <a class= "bouton_afficher" href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
+    <a class="bouton_ajout" href="/artistes/formulaire/">Ajouter un nouveau groupe</a>
+    <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
+    <a class="bouton_afficher" href="/artistes/afficher_all/">Afficher les groupes enregistrés</a>
 </body>
 </html>
+

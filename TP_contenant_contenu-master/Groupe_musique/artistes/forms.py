@@ -17,9 +17,9 @@ class GroupeFormulaire(ModelForm):
 
         widgets = {
             'nom': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': 'Nom du groupe…'}),
-            'annee_creation': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': 'Année de formation...'}),
+            'annee_creation': forms.NumberInput(attrs={'class': 'class_css_input', 'placeholder': 'Année de formation...'}),
             'style_musique': forms.Select(attrs={'class': 'class_css_input'}),
-            'nbr_album': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': "Nombre d'albums..."}),
+            'nbr_album': forms.NumberInput(attrs={'class': 'class_css_input', 'placeholder': "Nombre d'albums..."}),
             'nationalite': forms.TextInput(attrs={'class': 'class_css_input', 'placeholder': 'Nationalité'}),
         }
 

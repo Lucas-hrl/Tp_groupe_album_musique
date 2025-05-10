@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
@@ -7,13 +7,25 @@
     <title>Affichage Albums</title>
 </head>
 <body>
-    {% for donnees in liste_a %}
-        <li>{{donnees.nom_album}} - {{donnees.nom_groupe}} - {{donnees.date_sortie}} <li>
-        <a href="/artistes/afficher_un_album/{{donnees.id}}/">Affichage détails…</a>
-        <a href="/artistes/update_album/{{donnees.id}}/">Update</a>
-        <a href="/artistes/supprimer_album/{{donnees.id}}/">Supprimer !</a>
-    {% endfor %}
-    <a class = "bouton_ajout" href="/artistes/ajout_album/">Ajouter un album</a>
-    <a class = "bouton_ajout" href="/artistes/index/">Page d'accueil</a>
+    <header>
+        <h1>Liste des albums</h1>
+    </header>
+
+    <ul>
+        {% for donnees in liste_a %}
+            <li>
+                <strong>{{ donnees.nom_album }}</strong> - {{ donnees.nom_groupe }} - {{ donnees.date_sortie }}
+                <br>
+                <a class="bouton_afficher" href="/artistes/afficher_un_album/{{donnees.id}}/">Affichage détails…</a>
+                <a class="bouton_ajout" href="/artistes/update_album/{{donnees.id}}/">Update</a>
+                <a class="bouton_supprimer" href="/artistes/supprimer_album/{{donnees.id}}/">Supprimer !</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div style="margin-top: 20px;">
+        <a class="bouton_ajout" href="/artistes/ajout_album/">Ajouter un album</a>
+        <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
+    </div>
 </body>
 </html>
