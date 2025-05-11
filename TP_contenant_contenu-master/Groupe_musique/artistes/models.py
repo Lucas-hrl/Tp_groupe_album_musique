@@ -23,9 +23,7 @@ class Groupe(models.Model):
     annee_creation = models.IntegerField(blank=False)
     style_musique = models.CharField(max_length=50, choices=STYLES, blank=False)
     nbr_album = models.IntegerField()
-    nationalite = models.CharField(max_length=100, blank=False)
-
-
+    nationalite = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nom
@@ -35,7 +33,7 @@ class Groupe(models.Model):
         return chaine
 
     def dico(self):
-        return {"nom":self.nom,"annee_creation":self.annee_creation}
+        return {"nom":self.nom,"annee_creation":self.annee_creation,"style_musique":self.style_musique,"nbr_album":self.nbr_album,"nationalite":self.nationalite}
 
 
 

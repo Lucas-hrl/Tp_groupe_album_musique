@@ -7,10 +7,14 @@
     <title>Affichage Album</title>
 </head>
 <body>
-    <p>Affichage : {{album.id}}) {{album}}</p>
+<header>
+        <h1>Détails de l'album : {{ album.nom_album }}</h1>
+</header>
+    <p>Album n°{{album.id}}) {{album}}</p>
 
     <a class="bouton_ajout" href="/artistes/ajout_album/">Ajouter un nouvel album</a>
     <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
     <a class="bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
+    <footer>Web-design : Herchuel Lucas - 2025</footer>
 </body>
 </html>

@@ -12,7 +12,7 @@
     </header>
 
     <div class="form-container">
-        {% if id != '' %}
+        {% if not id %}
             <form class="form" action="/artistes/traitement_album/" method="POST">
         {% else %}
             <form class="form" action="/artistes/traitement_update_album/{{id}}/" method="POST">
@@ -27,5 +27,6 @@
         <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
         <a class="bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
     </div>
+    <footer>Web-design : Herchuel Lucas - 2025</footer>
 </body>
 </html>
