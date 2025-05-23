@@ -1,0 +1,107 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background:#3c3c3c;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 48px;
+    color: greenyellow;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px black;  /* Ombre noire */
+}
+
+/* Paragraphes */
+p {
+    font-size: 22px;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+}
+
+/* Boutons */
+.bouton_ajout, .bouton_afficher , .bouton_supprimer, .bouton_accueil{
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Bouton "Accueil" */
+.bouton_accueil{
+    background-color: green;
+    color: white;
+}
+.bouton_accueil:hover{
+    background-color:limegreen;
+    transform: scale(1.05);
+}
+
+/* Bouton "Ajouter" */
+.bouton_ajout {
+    background-color: #3498db;
+    color: white;
+}
+
+.bouton_ajout:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);  /* Agrandit le bouton au survol */
+}
+
+/* Bouton "Afficher" */
+.bouton_afficher {
+    background-color: #f39c12;
+    color: white;
+}
+
+.bouton_afficher:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);  /* Agrandit le bouton au survol */
+}
+/* Bouton "Supprimer" */
+.bouton_supprimer {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.bouton_supprimer:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);  /* Agrandit le bouton au survol */
+}
+
+/* Liens */
+a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    background-color: #34495e;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 12px;
+}

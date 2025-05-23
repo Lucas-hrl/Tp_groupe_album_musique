@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Affichage Albums</title>
+</head>
+<body>
+    <header>
+        <h1>Liste des albums</h1>
+    </header>
+
+    <ul>
+        {% for donnees in liste_a %}
+            <li>
+                <strong>{{ donnees.nom_album }}</strong> - {{ donnees.nom_groupe }} - {{ donnees.date_sortie }}
+                <br>
+                <a class="bouton_afficher" href="/artistes/afficher_un_album/{{donnees.id}}/">Affichage détails…</a>
+                <a class="bouton_ajout" href="/artistes/update_album/{{donnees.id}}/">Update</a>
+                <a class="bouton_supprimer" href="/artistes/supprimer_album/{{donnees.id}}/">Supprimer !</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div style="margin-top: 20px;">
+        <a class="bouton_ajout" href="/artistes/ajout_album/">Ajouter un album</a>
+        <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
+    </div>
+    <footer>Web-design : Herchuel Lucas - 2025</footer>
+</body>
+</html>

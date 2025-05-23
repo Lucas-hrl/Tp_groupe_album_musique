@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'artistes/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Ajout d'album</title>
+</head>
+<body>
+    <header>
+        <h1>Formulaire de saisie / modification des albums :</h1>
+    </header>
+
+    <div class="form-container">
+        {% if not id %}
+            <form class="form" action="/artistes/traitement_album/" method="POST">
+        {% else %}
+            <form class="form" action="/artistes/traitement_update_album/{{id}}/" method="POST">
+        {% endif %}
+            {% csrf_token %}
+            {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste -->
+            <input type="submit" class="bouton_ajout" value="Envoyer les données">
+        </form>
+    </div>
+
+    <div class="navigation">
+        <a class="bouton_accueil" href="/artistes/index/">Page d'accueil</a>
+        <a class="bouton_afficher" href="/artistes/afficher_all_album/">Afficher les albums enregistrés</a>
+    </div>
+    <footer>Web-design : Herchuel Lucas - 2025</footer>
+</body>
+</html>
