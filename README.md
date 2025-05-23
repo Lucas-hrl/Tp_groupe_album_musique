@@ -26,4 +26,5 @@ Vous serez redirigez vers la page d'acceuil du site (/artistes/index/) qui liste
 
 
 Projet: R2.09 Web dynamique
+
 Auteur : HERCHUEL Lucas - 2025 
